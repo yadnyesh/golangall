@@ -1,27 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/goestoeleven/golangtraining/04_scope/01_package-scope/02_visibility/vis"
+)
 
 func main() {
-	//print decimal
-	//fmt.Println(42)
 
-	//print binary
-	//fmt.Printf("%d - %b\n", 42, 42)
-
-	//print Hexadecimal
-	//fmt.Printf("%d - %#x\n", 42, 42)
-
-	//for i := 0; i < 300; i++ {
-	//	fmt.Printf("%d \t %b \t %x \t %q \n", i, i, i, i)
-	//}
-	max := max(7)
-	fmt.Println(max)
-
+	fmt.Println((vis.MyName))
+	vis.PrintVar()
 }
-
-func max(x int) int {
-	return 42 + x
-}
-
 
