@@ -2,26 +2,26 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+	"log"
+	"io/ioutil"
 )
-
-
-func wrapper() func() int {
-	x := 0
-	return func() int {
-		x--
-		return x
-	}
-}
-
 
 
 func main() {
 
-	increment := wrapper()
+	res, err := http.Get("https://www.google.co.in")
+	if err != nil {
+		log.Fatal(err)
+	}
+	page, err := ioutil.ReadAll(res.Body)
 
-	fmt.Println(increment())
-	fmt.Println(increment())
+	res.Body.Close()
+	if err != nil {
+		log.Fatal(err)
+	}
 
+	fmt.Printf("%s", page)
 
 }
 
