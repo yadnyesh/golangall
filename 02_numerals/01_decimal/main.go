@@ -10,16 +10,11 @@ import (
 
 func main() {
 
-	res, err := http.Get("https://www.google.co.in")
-	if err != nil {
-		log.Fatal(err)
-	}
-	page, err := ioutil.ReadAll(res.Body)
+	res, _ := http.Get("https://www.google.co.in")
+
+	page, _ := ioutil.ReadAll(res.Body)
 
 	res.Body.Close()
-	if err != nil {
-		log.Fatal(err)
-	}
 
 	fmt.Printf("%s", page)
 
