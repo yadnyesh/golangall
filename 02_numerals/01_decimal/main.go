@@ -13,6 +13,7 @@ func main() {
 		x++
 		return x
 	}
+
 	fmt.Println(increment())
 	fmt.Println(increment())
 
