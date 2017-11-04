@@ -5,14 +5,19 @@ import (
 )
 
 
+func wrapper() func() int {
+	x := 0
+	return func() int {
+		x--
+		return x
+	}
+}
+
+
 
 func main() {
 
-	x := 0
-	increment := func() int {
-		x++
-		return x
-	}
+	increment := wrapper()
 
 	fmt.Println(increment())
 	fmt.Println(increment())
