@@ -22,7 +22,7 @@ func main() {
 	x := 42
 	y := x + 42
 	fmt.Printf("%T \n", x)
-	fmt.Printf("%T \n", y)
+	fmt.Printf("y's memory address \n", &y)
 	//fmt.Printf(strconv.FormatFloat(Pi, 'g', 1, 64))
 	//fmt.Printf(Language)
 	//fmt.Printf(q)
