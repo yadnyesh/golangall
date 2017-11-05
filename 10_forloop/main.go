@@ -25,4 +25,10 @@ func main() {
 		i++
 	}
 
+	for j:=5000 ; j < 5100; j++ {
+		fmt.Println(i, " - ", string(i), " - ", []byte (string(i)))
+	}
+
+
+
 }
