@@ -8,4 +8,21 @@ func main() {
 			fmt.Println(i, " - ", j)
 		}
 	}
+
+	i := 0
+	for i < 10 {
+		fmt.Println(i)
+		i++
+	}
+
+	///don't do
+	i = 0
+	for {
+		fmt.Println(i)
+		if i >= 10 {
+			break;
+		}
+		i++
+	}
+
 }
