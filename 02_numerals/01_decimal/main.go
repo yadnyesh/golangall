@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"strconv"
 )
 
 
@@ -20,9 +19,13 @@ func main() {
 	//res.Body.Close()
 	//
 	//fmt.Printf("%s", page)
-	fmt.Printf(strconv.FormatFloat(Pi, 'g', 1, 64))
-	fmt.Printf(Language)
-	fmt.Printf(q)
+	x := 42
+	y := x + 42
+	fmt.Printf("%T \n", x)
+	fmt.Printf("%T \n", y)
+	//fmt.Printf(strconv.FormatFloat(Pi, 'g', 1, 64))
+	//fmt.Printf(Language)
+	//fmt.Printf(q)
 
 }
 
