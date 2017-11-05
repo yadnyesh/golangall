@@ -14,4 +14,7 @@ func main() {
 	fmt.Println(&b)
 	fmt.Println(*b) //de-referencing
 
+	*b = 42
+	fmt.Println(a);
+
 }
