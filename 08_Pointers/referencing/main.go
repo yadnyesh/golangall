@@ -8,9 +8,10 @@ func main() {
 	fmt.Println(a);
 	fmt.Println(&a);
 
-	var b *int = &a
+	var b *int = &a //referencing
 
 	fmt.Println(b)
 	fmt.Println(&b)
+	fmt.Println(*b) //de-referencing
 
 }
